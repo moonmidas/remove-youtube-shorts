@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --bg: #fff7ed;
+  --bg-accent: #fed7aa;
+  --card: rgba(255, 255, 255, 0.9);
+  --text: #431407;
+  --muted: #9a3412;
+  --button: #ea580c;
+  --button-hover: #c2410c;
+  --ring: rgba(234, 88, 12, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, var(--bg-accent), transparent 35%),
+    linear-gradient(160deg, #fffbeb 0%, var(--bg) 45%, #fdedd5 100%);
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 480px);
+  padding: 40px 32px;
+  border-radius: 24px;
+  background: var(--card);
+  border: 1px solid rgba(154, 52, 18, 0.12);
+  box-shadow:
+    0 24px 60px var(--ring),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  line-height: 0.95;
+}
+
+.copy {
+  margin: 18px 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: var(--button);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+}
